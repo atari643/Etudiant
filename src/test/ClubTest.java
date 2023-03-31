@@ -22,20 +22,25 @@ public class ClubTest {
     @Test
     public void testAddOneMemberToEachClub() {
         Club club = new Club("Java");
+
+        // ajut de 29 dans ce club
         for(int i = 0; i < 29; i++){
             Student student = new Student("leo");
             club.addApplicant(student, "application");
         }
         Club.addSeveralMembersToEachClub();
+
+        //ajout d'un 30eme eleve et verification qu'on puisse l'ajouter
         Student student = new Student("leo");
         club.addApplicant(student, "application");
         assertTrue(Club.addOneMemberToEachClub());
+
+        //essai d'ajouter un 31eme eleve ce qui n'est plus possible
         Student student2 = new Student("leo");
         club.addApplicant(student2, "application");
         assertFalse(Club.addOneMemberToEachClub());
-        Student student3 = new Student("leo");
-        club.addApplicant(student3, "application");
-        assertFalse(Club.addOneMemberToEachClub());
+
+        //essai d'ajouter un eleve null ce qui n'est pas possible
         Student std = new Student(null);
         club.addApplicant(std, "application");
         assertFalse(Club.addOneMemberToEachClub());
