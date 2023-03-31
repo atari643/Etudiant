@@ -15,10 +15,10 @@ public class App {
         listStudent.add(st3);
         Student st4 = new Student("Antonin");
         listStudent.add(st4);
-        club1.addApplicant(st1, "application 1");
-        club2.addApplicant(st2, "application 2");
-        club2.addApplicant(st3, "application 3");
-        club2.addApplicant(st4, "application 4");
+        club1.addApplicant(st1, "application 1", 1);
+        club2.addApplicant(st2, "application 2", 2);
+        club2.addApplicant(st3, "application 3", 3);
+        club2.addApplicant(st4, "application 4", 4);
         for (Student student : listStudent)
             System.out.println(student);
         Club.addSeveralMembersToEachClub();
