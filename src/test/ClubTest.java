@@ -26,23 +26,23 @@ public class ClubTest {
         // ajut de 29 dans ce club
         for(int i = 0; i < 29; i++){
             Student student = new Student("leo");
-            club.addApplicant(student, "application");
+            club.addApplicant(student, "application", 1);
         }
         Club.addSeveralMembersToEachClub();
 
         //ajout d'un 30eme eleve et verification qu'on puisse l'ajouter
         Student student = new Student("leo");
-        club.addApplicant(student, "application");
+        club.addApplicant(student, "application", 1);
         assertTrue(Club.addOneMemberToEachClub());
 
         //essai d'ajouter un 31eme eleve ce qui n'est plus possible
         Student student2 = new Student("leo");
-        club.addApplicant(student2, "application");
+        club.addApplicant(student2, "application", 1);
         assertFalse(Club.addOneMemberToEachClub());
 
         //essai d'ajouter un eleve null ce qui n'est pas possible
         Student std = new Student(null);
-        club.addApplicant(std, "application");
+        club.addApplicant(std, "application", 1);
         assertFalse(Club.addOneMemberToEachClub());
     }
 
