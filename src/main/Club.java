@@ -101,12 +101,13 @@ public class Club {
         int best = 0;
         Student studentToAdd = null;
         for (Student std : applicants.keySet()) {
-            if(applicants.get(std).score > best){
+            if(applicants.get(std).getScore() > best){
                 studentToAdd = std;
             }
         }
         if(studentToAdd != null){
             members.add(studentToAdd);
+            applicants.remove(studentToAdd);
         }else{
             System.out.println("aucun etudiant n'est ajouté au club, ils ne sont pas à la hauteur !");
         }

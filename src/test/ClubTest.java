@@ -80,7 +80,6 @@ public class ClubTest {
 
         club.addApplicant(st1, "application 1", 10);
         club.addApplicant(st2, "application 2", 9);
-        club.addApplicant(st3, "application 3", 0);
-        club.addApplicant(st4, "application 4", 6);
+        club.addMeilleurApplicant();
     }
 }
