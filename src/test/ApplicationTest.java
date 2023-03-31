@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import main.*;
 
-public class ApplicationTest {
+public class ApplicationTest{
     @Test
     public void testGetClub() {
 

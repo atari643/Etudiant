@@ -1,6 +1,6 @@
 package main;
 
-public class Application {
+public class Application{
     private String content;
     private Student student;
     private Club club;
