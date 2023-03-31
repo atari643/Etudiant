@@ -26,10 +26,10 @@ public class Club {
         clubs.add(this);
     }
 
-    public void addApplicant(Student st, String content){
+    public void addApplicant(Student st, String content, int score){
         if (st == null) return;
         if (applicants.get(st) != null) return;
-        Application application = new Application(st, this, content);
+        Application application = new Application(st, this, content, score);
         applicants.put(st, application);
     }
 
