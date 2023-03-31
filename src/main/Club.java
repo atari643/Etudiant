@@ -92,5 +92,24 @@ public class Club {
     public String toString() {
         return "Club : "+name;
     }
+
+    /**
+     * va ajouter au club, l'etudiant qui aura la meilleur note sur sa candidature
+     * n'ajoute personne si aucun etudiant n'a une npte au dessus de 0.
+     */
+    public void addMeilleurApplicant(){
+        int best = 0;
+        Student studentToAdd = null;
+        for (Student std : applicants.keySet()) {
+            if(applicants.get(std).score > best){
+                studentToAdd = std;
+            }
+        }
+        if(studentToAdd != null){
+            members.add(studentToAdd);
+        }else{
+            System.out.println("aucun etudiant n'est ajouté au club, ils ne sont pas à la hauteur !");
+        }
+    }
 }
             
