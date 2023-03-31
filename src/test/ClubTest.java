@@ -1,6 +1,12 @@
 package test;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
+
+import main.Club;
+import main.Student;
 
 public class ClubTest {
     @Test
@@ -26,7 +32,7 @@ public class ClubTest {
         assertTrue(Club.addOneMemberToEachClub());
         Student student2 = new Student("leo");
         club.addApplicant(student2, "application");
-        assertTrue(Club.addOneMemberToEachClub());
+        assertFalse(Club.addOneMemberToEachClub());
         Student student3 = new Student("leo");
         club.addApplicant(student3, "application");
         assertFalse(Club.addOneMemberToEachClub());
