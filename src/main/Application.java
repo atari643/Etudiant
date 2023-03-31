@@ -4,8 +4,9 @@ public class Application {
     private String content;
     private Student student;
     private Club club;
-    public Application(Student student, Club club, String content){
-        this.student = student; this.club = club; this.content = content;
+    private int score;
+    public Application(Student student, Club club, String content, int score){
+        this.student = student; this.club = club; this.content = content; this.score = score;
     }
     public Club getClub() {return club; }
     public Student getStudent() {return student; }
@@ -19,6 +20,9 @@ public class Application {
         }catch(IllegalArgumentException e){
             return "Le contenu est vide ou inexistant";
         }
+    }
+    public int getScore(){
+        return score;
     }
     /**
     * return a description of the application  including its content

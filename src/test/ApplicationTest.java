@@ -18,7 +18,7 @@ public class ApplicationTest {
 
     @Test (expected = IllegalArgumentException)
     public void testGetContentEmpty(){
-        Application app = new Application("Michel", "tennis", "");
+        Application app = new Application("Michel", "tennis", "", 1);
         app.getContent();
         
 
@@ -26,7 +26,7 @@ public class ApplicationTest {
     /*Test du contenu null inconnu */
     @Test (expected = IllegalArgumentException)
     public void testGetContentNull(){
-        Application app2 = new Application("Michel", "tennis", null);
+        Application app2 = new Application("Michel", "tennis", null, 1);
         app.getContent();
     }
     @Test
